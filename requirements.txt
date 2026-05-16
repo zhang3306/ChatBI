@@ -1,3 +1,4 @@
+# Core
 langchain>=0.3.0
 langchain-deepseek>=0.1.0
 langchain-community>=0.3.0
@@ -7,5 +8,10 @@ pandas>=2.2.0
 streamlit>=1.35.0
 faker>=25.0.0
 python-dotenv>=1.0.0
+
+# Utilities
 markdown-it-py
 tabulate
+
+# Optional: ChromaDB for semantic vector search (ONNX model auto-downloaded)
+# pip install chromadb  # ~80MB, enables semantic retrieval over offline keyword matching

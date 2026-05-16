@@ -38,7 +38,7 @@
 ```
 LLM:      DeepSeek V4 Flash
 框架:     LangChain, SQLAlchemy
-检索:     离线关键词匹配（中文 bigram + 倒排索引）
+检索:     ChromaDB 向量检索（首选） / 离线关键词 fallback
 安全:     sqlparse AST 解析
 数据:     SQLite + pandas DataFrame（可扩展至 PostgreSQL）
 前端:     Streamlit
@@ -64,17 +64,20 @@ cd chatbi
 # 2. 安装依赖
 pip install -r requirements.txt
 
-# 3. 配置 API Key
+# 3. (可选) 安装 ChromaDB 以启用语义检索
+pip install chromadb  # ~80MB ONNX 模型首次使用自动下载
+
+# 4. 配置 API Key
 cp .env.example .env
 # 编辑 .env，填入 DEEPSEEK_API_KEY
 
-# 4. 生成模拟数据
+# 5. 生成模拟数据
 python run.py --seed
 
-# 5. 构建 RAG 索引
+# 6. 构建 RAG 索引
 python run.py --index
 
-# 6. 启动
+# 7. 启动
 python -m streamlit run main.py
 ```
 

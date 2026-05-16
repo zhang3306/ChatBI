@@ -119,7 +119,7 @@ with st.sidebar:
             st.session_state.pending_query = q
 
     st.divider()
-    st.caption("v1.0 · LangChain + DeepSeek + RAG")
+    st.caption("v1.0 · DeepSeek + LangChain + Chroma + Streamlit")
 
 
 # ── Show DB metrics ─────────────────────────────────────────────
